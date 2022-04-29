@@ -27,4 +27,5 @@ const doc = async (specifier, options = {}) => {
 }
 
 module.exports = doc;
+module.exports.default = doc;
 module.exports.doc = doc;

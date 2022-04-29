@@ -1,0 +1,3746 @@
+[
+    {
+        "kind": "class",
+        "name": "Formatter",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/formatter.ts",
+            "line": 5,
+            "col": 0
+        },
+        "declarationKind": "export",
+        "classDef": {
+            "isAbstract": false,
+            "constructors": [
+                {
+                    "accessibility": "private",
+                    "name": "constructor",
+                    "params": [],
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/formatter.ts",
+                        "line": 6,
+                        "col": 4
+                    }
+                }
+            ],
+            "properties": [],
+            "indexSignatures": [],
+            "methods": [
+                {
+                    "accessibility": "public",
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "formatSearchResult",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "details",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "array",
+                                    "array": {
+                                        "repr": "any",
+                                        "kind": "keyword",
+                                        "keyword": "any"
+                                    }
+                                }
+                            },
+                            {
+                                "kind": "assign",
+                                "left": {
+                                    "kind": "identifier",
+                                    "name": "options",
+                                    "optional": false,
+                                    "tsType": {
+                                        "repr": "",
+                                        "kind": "typeLiteral",
+                                        "typeLiteral": {
+                                            "methods": [],
+                                            "properties": [
+                                                {
+                                                    "name": "limit",
+                                                    "params": [],
+                                                    "computed": false,
+                                                    "optional": true,
+                                                    "tsType": {
+                                                        "repr": "number",
+                                                        "kind": "keyword",
+                                                        "keyword": "number"
+                                                    },
+                                                    "typeParams": []
+                                                },
+                                                {
+                                                    "name": "type",
+                                                    "params": [],
+                                                    "computed": false,
+                                                    "optional": true,
+                                                    "tsType": {
+                                                        "repr": "",
+                                                        "kind": "union",
+                                                        "union": [
+                                                            {
+                                                                "repr": "film",
+                                                                "kind": "literal",
+                                                                "literal": {
+                                                                    "kind": "string",
+                                                                    "string": "film"
+                                                                }
+                                                            },
+                                                            {
+                                                                "repr": "video",
+                                                                "kind": "literal",
+                                                                "literal": {
+                                                                    "kind": "string",
+                                                                    "string": "video"
+                                                                }
+                                                            },
+                                                            {
+                                                                "repr": "channel",
+                                                                "kind": "literal",
+                                                                "literal": {
+                                                                    "kind": "string",
+                                                                    "string": "channel"
+                                                                }
+                                                            },
+                                                            {
+                                                                "repr": "playlist",
+                                                                "kind": "literal",
+                                                                "literal": {
+                                                                    "kind": "string",
+                                                                    "string": "playlist"
+                                                                }
+                                                            },
+                                                            {
+                                                                "repr": "all",
+                                                                "kind": "literal",
+                                                                "literal": {
+                                                                    "kind": "string",
+                                                                    "string": "all"
+                                                                }
+                                                            }
+                                                        ]
+                                                    },
+                                                    "typeParams": []
+                                                }
+                                            ],
+                                            "callSignatures": [],
+                                            "indexSignatures": []
+                                        }
+                                    }
+                                },
+                                "right": "[UNSUPPORTED]",
+                                "tsType": null
+                            }
+                        ],
+                        "returnType": null,
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/formatter.ts",
+                        "line": 8,
+                        "col": 4
+                    }
+                }
+            ],
+            "extends": null,
+            "implements": [],
+            "typeParams": [],
+            "superTypeParams": []
+        }
+    },
+    {
+        "kind": "import",
+        "name": "Thumbnail",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/Structures/exports.ts",
+            "line": 5,
+            "col": 0
+        },
+        "declarationKind": "private",
+        "importDef": {
+            "src": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/Structures/Thumbnail.ts",
+            "imported": "default"
+        }
+    },
+    {
+        "kind": "import",
+        "name": "Channel",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/Structures/exports.ts",
+            "line": 2,
+            "col": 0
+        },
+        "declarationKind": "private",
+        "importDef": {
+            "src": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/Structures/Channel.ts",
+            "imported": "default"
+        }
+    },
+    {
+        "kind": "import",
+        "name": "Playlist",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/Structures/exports.ts",
+            "line": 3,
+            "col": 0
+        },
+        "declarationKind": "private",
+        "importDef": {
+            "src": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/Structures/Playlist.ts",
+            "imported": "default"
+        }
+    },
+    {
+        "kind": "import",
+        "name": "Video",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/Structures/exports.ts",
+            "line": 4,
+            "col": 0
+        },
+        "declarationKind": "private",
+        "importDef": {
+            "src": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/Structures/Video.ts",
+            "imported": "default"
+        }
+    },
+    {
+        "kind": "interface",
+        "name": "SearchOptions",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+            "line": 13,
+            "col": 0
+        },
+        "declarationKind": "export",
+        "interfaceDef": {
+            "extends": [],
+            "methods": [],
+            "properties": [
+                {
+                    "name": "limit",
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 14,
+                        "col": 4
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                        "repr": "number",
+                        "kind": "keyword",
+                        "keyword": "number"
+                    },
+                    "typeParams": []
+                },
+                {
+                    "name": "type",
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 15,
+                        "col": 4
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                        "repr": "",
+                        "kind": "union",
+                        "union": [
+                            {
+                                "repr": "video",
+                                "kind": "literal",
+                                "literal": {
+                                    "kind": "string",
+                                    "string": "video"
+                                }
+                            },
+                            {
+                                "repr": "channel",
+                                "kind": "literal",
+                                "literal": {
+                                    "kind": "string",
+                                    "string": "channel"
+                                }
+                            },
+                            {
+                                "repr": "playlist",
+                                "kind": "literal",
+                                "literal": {
+                                    "kind": "string",
+                                    "string": "playlist"
+                                }
+                            },
+                            {
+                                "repr": "all",
+                                "kind": "literal",
+                                "literal": {
+                                    "kind": "string",
+                                    "string": "all"
+                                }
+                            },
+                            {
+                                "repr": "film",
+                                "kind": "literal",
+                                "literal": {
+                                    "kind": "string",
+                                    "string": "film"
+                                }
+                            }
+                        ]
+                    },
+                    "typeParams": []
+                },
+                {
+                    "name": "requestOptions",
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 16,
+                        "col": 4
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                        "repr": "RequestInit",
+                        "kind": "typeRef",
+                        "typeRef": {
+                            "typeParams": null,
+                            "typeName": "RequestInit"
+                        }
+                    },
+                    "typeParams": []
+                },
+                {
+                    "name": "safeSearch",
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 17,
+                        "col": 4
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                        "repr": "boolean",
+                        "kind": "keyword",
+                        "keyword": "boolean"
+                    },
+                    "typeParams": []
+                }
+            ],
+            "callSignatures": [],
+            "indexSignatures": [],
+            "typeParams": []
+        }
+    },
+    {
+        "kind": "interface",
+        "name": "PlaylistOptions",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+            "line": 20,
+            "col": 0
+        },
+        "declarationKind": "export",
+        "interfaceDef": {
+            "extends": [],
+            "methods": [],
+            "properties": [
+                {
+                    "name": "limit",
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 21,
+                        "col": 4
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                        "repr": "number",
+                        "kind": "keyword",
+                        "keyword": "number"
+                    },
+                    "typeParams": []
+                },
+                {
+                    "name": "requestOptions",
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 22,
+                        "col": 4
+                    },
+                    "params": [],
+                    "computed": false,
+                    "optional": true,
+                    "tsType": {
+                        "repr": "RequestInit",
+                        "kind": "typeRef",
+                        "typeRef": {
+                            "typeParams": null,
+                            "typeName": "RequestInit"
+                        }
+                    },
+                    "typeParams": []
+                }
+            ],
+            "callSignatures": [],
+            "indexSignatures": [],
+            "typeParams": []
+        }
+    },
+    {
+        "kind": "class",
+        "name": "YouTube",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+            "line": 25,
+            "col": 0
+        },
+        "declarationKind": "export",
+        "classDef": {
+            "isAbstract": false,
+            "constructors": [
+                {
+                    "accessibility": "private",
+                    "name": "constructor",
+                    "params": [],
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 26,
+                        "col": 4
+                    }
+                }
+            ],
+            "properties": [],
+            "indexSignatures": [],
+            "methods": [
+                {
+                    "jsDoc": {
+                        "doc": "Search",
+                        "tags": [
+                            {
+                                "kind": "param",
+                                "name": "query",
+                                "type": "string",
+                                "doc": "Search youtube"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "options",
+                                "type": "object",
+                                "doc": "Search options"
+                            },
+                            {
+                                "kind": "unsupported",
+                                "value": "@param {number} [options.limit=20] Limit"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "options.type",
+                                "type": "\"video\"|\"channel\"|\"playlist\"|\"all\"|\"film\"",
+                                "doc": "Type"
+                            },
+                            {
+                                "kind": "unsupported",
+                                "value": "@param {RequestInit} [options.requestOptions] Request options"
+                            },
+                            {
+                                "kind": "unsupported",
+                                "value": "@param {boolean} [options.safeSearch] Safe search filter"
+                            }
+                        ]
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "search",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "intersection",
+                                    "intersection": [
+                                        {
+                                            "repr": "SearchOptions",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "SearchOptions"
+                                            }
+                                        },
+                                        {
+                                            "repr": "",
+                                            "kind": "typeLiteral",
+                                            "typeLiteral": {
+                                                "methods": [],
+                                                "properties": [
+                                                    {
+                                                        "name": "type",
+                                                        "params": [],
+                                                        "computed": false,
+                                                        "optional": false,
+                                                        "tsType": {
+                                                            "repr": "video",
+                                                            "kind": "literal",
+                                                            "literal": {
+                                                                "kind": "string",
+                                                                "string": "video"
+                                                            }
+                                                        },
+                                                        "typeParams": []
+                                                    }
+                                                ],
+                                                "callSignatures": [],
+                                                "indexSignatures": []
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "Video",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Video"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 39,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "search",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "intersection",
+                                    "intersection": [
+                                        {
+                                            "repr": "SearchOptions",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "SearchOptions"
+                                            }
+                                        },
+                                        {
+                                            "repr": "",
+                                            "kind": "typeLiteral",
+                                            "typeLiteral": {
+                                                "methods": [],
+                                                "properties": [
+                                                    {
+                                                        "name": "type",
+                                                        "params": [],
+                                                        "computed": false,
+                                                        "optional": false,
+                                                        "tsType": {
+                                                            "repr": "film",
+                                                            "kind": "literal",
+                                                            "literal": {
+                                                                "kind": "string",
+                                                                "string": "film"
+                                                            }
+                                                        },
+                                                        "typeParams": []
+                                                    }
+                                                ],
+                                                "callSignatures": [],
+                                                "indexSignatures": []
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "Video",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Video"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 40,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "search",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "intersection",
+                                    "intersection": [
+                                        {
+                                            "repr": "SearchOptions",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "SearchOptions"
+                                            }
+                                        },
+                                        {
+                                            "repr": "",
+                                            "kind": "typeLiteral",
+                                            "typeLiteral": {
+                                                "methods": [],
+                                                "properties": [
+                                                    {
+                                                        "name": "type",
+                                                        "params": [],
+                                                        "computed": false,
+                                                        "optional": false,
+                                                        "tsType": {
+                                                            "repr": "channel",
+                                                            "kind": "literal",
+                                                            "literal": {
+                                                                "kind": "string",
+                                                                "string": "channel"
+                                                            }
+                                                        },
+                                                        "typeParams": []
+                                                    }
+                                                ],
+                                                "callSignatures": [],
+                                                "indexSignatures": []
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "Channel",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Channel"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 41,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "search",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "intersection",
+                                    "intersection": [
+                                        {
+                                            "repr": "SearchOptions",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "SearchOptions"
+                                            }
+                                        },
+                                        {
+                                            "repr": "",
+                                            "kind": "typeLiteral",
+                                            "typeLiteral": {
+                                                "methods": [],
+                                                "properties": [
+                                                    {
+                                                        "name": "type",
+                                                        "params": [],
+                                                        "computed": false,
+                                                        "optional": false,
+                                                        "tsType": {
+                                                            "repr": "playlist",
+                                                            "kind": "literal",
+                                                            "literal": {
+                                                                "kind": "string",
+                                                                "string": "playlist"
+                                                            }
+                                                        },
+                                                        "typeParams": []
+                                                    }
+                                                ],
+                                                "callSignatures": [],
+                                                "indexSignatures": []
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "Playlist",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Playlist"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 42,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "search",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "intersection",
+                                    "intersection": [
+                                        {
+                                            "repr": "SearchOptions",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "SearchOptions"
+                                            }
+                                        },
+                                        {
+                                            "repr": "",
+                                            "kind": "typeLiteral",
+                                            "typeLiteral": {
+                                                "methods": [],
+                                                "properties": [
+                                                    {
+                                                        "name": "type",
+                                                        "params": [],
+                                                        "computed": false,
+                                                        "optional": false,
+                                                        "tsType": {
+                                                            "repr": "all",
+                                                            "kind": "literal",
+                                                            "literal": {
+                                                                "kind": "string",
+                                                                "string": "all"
+                                                            }
+                                                        },
+                                                        "typeParams": []
+                                                    }
+                                                ],
+                                                "callSignatures": [],
+                                                "indexSignatures": []
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "",
+                                            "kind": "parenthesized",
+                                            "parenthesized": {
+                                                "repr": "",
+                                                "kind": "union",
+                                                "union": [
+                                                    {
+                                                        "repr": "Video",
+                                                        "kind": "typeRef",
+                                                        "typeRef": {
+                                                            "typeParams": null,
+                                                            "typeName": "Video"
+                                                        }
+                                                    },
+                                                    {
+                                                        "repr": "Channel",
+                                                        "kind": "typeRef",
+                                                        "typeRef": {
+                                                            "typeParams": null,
+                                                            "typeName": "Channel"
+                                                        }
+                                                    },
+                                                    {
+                                                        "repr": "Playlist",
+                                                        "kind": "typeRef",
+                                                        "typeRef": {
+                                                            "typeParams": null,
+                                                            "typeName": "Playlist"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 43,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "search",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "SearchOptions",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "SearchOptions"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "",
+                                            "kind": "parenthesized",
+                                            "parenthesized": {
+                                                "repr": "",
+                                                "kind": "union",
+                                                "union": [
+                                                    {
+                                                        "repr": "Video",
+                                                        "kind": "typeRef",
+                                                        "typeRef": {
+                                                            "typeParams": null,
+                                                            "typeName": "Video"
+                                                        }
+                                                    },
+                                                    {
+                                                        "repr": "Channel",
+                                                        "kind": "typeRef",
+                                                        "typeRef": {
+                                                            "typeParams": null,
+                                                            "typeName": "Channel"
+                                                        }
+                                                    },
+                                                    {
+                                                        "repr": "Playlist",
+                                                        "kind": "typeRef",
+                                                        "typeRef": {
+                                                            "typeParams": null,
+                                                            "typeName": "Playlist"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 44,
+                        "col": 4
+                    }
+                },
+                {
+                    "jsDoc": {
+                        "doc": "Search one",
+                        "tags": [
+                            {
+                                "kind": "param",
+                                "name": "query",
+                                "type": "string",
+                                "doc": "Search query"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "type",
+                                "type": "\"video\"|\"channel\"|\"playlist\"|\"all\"|\"film\"",
+                                "doc": "Search type"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "safeSearch",
+                                "type": "boolean",
+                                "doc": "Safe search filter"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "requestOptions",
+                                "type": "RequestInit",
+                                "doc": "Request options"
+                            }
+                        ]
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "searchOne",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "type",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "video",
+                                    "kind": "literal",
+                                    "literal": {
+                                        "kind": "string",
+                                        "string": "video"
+                                    }
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "safeSearch",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "boolean",
+                                    "kind": "keyword",
+                                    "keyword": "boolean"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "requestOptions",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "RequestInit",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "RequestInit"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "Video",
+                                        "kind": "typeRef",
+                                        "typeRef": {
+                                            "typeParams": null,
+                                            "typeName": "Video"
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 82,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "searchOne",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "type",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "film",
+                                    "kind": "literal",
+                                    "literal": {
+                                        "kind": "string",
+                                        "string": "film"
+                                    }
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "safeSearch",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "boolean",
+                                    "kind": "keyword",
+                                    "keyword": "boolean"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "requestOptions",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "RequestInit",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "RequestInit"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "Video",
+                                        "kind": "typeRef",
+                                        "typeRef": {
+                                            "typeParams": null,
+                                            "typeName": "Video"
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 83,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "searchOne",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "type",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "channel",
+                                    "kind": "literal",
+                                    "literal": {
+                                        "kind": "string",
+                                        "string": "channel"
+                                    }
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "safeSearch",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "boolean",
+                                    "kind": "keyword",
+                                    "keyword": "boolean"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "requestOptions",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "RequestInit",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "RequestInit"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "Channel",
+                                        "kind": "typeRef",
+                                        "typeRef": {
+                                            "typeParams": null,
+                                            "typeName": "Channel"
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 84,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "searchOne",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "type",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "playlist",
+                                    "kind": "literal",
+                                    "literal": {
+                                        "kind": "string",
+                                        "string": "playlist"
+                                    }
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "safeSearch",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "boolean",
+                                    "kind": "keyword",
+                                    "keyword": "boolean"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "requestOptions",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "RequestInit",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "RequestInit"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "Playlist",
+                                        "kind": "typeRef",
+                                        "typeRef": {
+                                            "typeParams": null,
+                                            "typeName": "Playlist"
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 85,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "searchOne",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "type",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "union",
+                                    "union": [
+                                        {
+                                            "repr": "video",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "video"
+                                            }
+                                        },
+                                        {
+                                            "repr": "channel",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "channel"
+                                            }
+                                        },
+                                        {
+                                            "repr": "film",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "film"
+                                            }
+                                        },
+                                        {
+                                            "repr": "playlist",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "playlist"
+                                            }
+                                        },
+                                        {
+                                            "repr": "all",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "all"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "safeSearch",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "boolean",
+                                    "kind": "keyword",
+                                    "keyword": "boolean"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "requestOptions",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "RequestInit",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "RequestInit"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "union",
+                                        "union": [
+                                            {
+                                                "repr": "Video",
+                                                "kind": "typeRef",
+                                                "typeRef": {
+                                                    "typeParams": null,
+                                                    "typeName": "Video"
+                                                }
+                                            },
+                                            {
+                                                "repr": "Channel",
+                                                "kind": "typeRef",
+                                                "typeRef": {
+                                                    "typeParams": null,
+                                                    "typeName": "Channel"
+                                                }
+                                            },
+                                            {
+                                                "repr": "Playlist",
+                                                "kind": "typeRef",
+                                                "typeRef": {
+                                                    "typeParams": null,
+                                                    "typeName": "Playlist"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 86,
+                        "col": 4
+                    }
+                },
+                {
+                    "jsDoc": {
+                        "doc": "Returns playlist details",
+                        "tags": [
+                            {
+                                "kind": "param",
+                                "name": "url",
+                                "type": "string",
+                                "doc": "Playlist URL"
+                            },
+                            {
+                                "kind": "unsupported",
+                                "value": "@param {object} [options] Options"
+                            },
+                            {
+                                "kind": "unsupported",
+                                "value": "@param {number} [options.limit=100] Playlist video limit"
+                            },
+                            {
+                                "kind": "unsupported",
+                                "value": "@param {RequestInit} [options.requestOptions] Request Options"
+                            }
+                        ]
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "getPlaylist",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "url",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "PlaylistOptions",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "PlaylistOptions"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "Playlist",
+                                        "kind": "typeRef",
+                                        "typeRef": {
+                                            "typeParams": null,
+                                            "typeName": "Playlist"
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 108,
+                        "col": 4
+                    }
+                },
+                {
+                    "jsDoc": {
+                        "doc": "Returns basic video info",
+                        "tags": [
+                            {
+                                "kind": "param",
+                                "name": "url",
+                                "doc": "Video url to parse"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "requestOptions",
+                                "doc": "Request options"
+                            }
+                        ]
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "getVideo",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "url",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "union",
+                                    "union": [
+                                        {
+                                            "repr": "string",
+                                            "kind": "keyword",
+                                            "keyword": "string"
+                                        },
+                                        {
+                                            "repr": "Video",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Video"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "requestOptions",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "RequestInit",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "RequestInit"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "Video",
+                                        "kind": "typeRef",
+                                        "typeRef": {
+                                            "typeParams": null,
+                                            "typeName": "Video"
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 123,
+                        "col": 4
+                    }
+                },
+                {
+                    "jsDoc": {
+                        "doc": "Fetches homepage videos"
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "homepage",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "Video",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Video"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 136,
+                        "col": 4
+                    }
+                },
+                {
+                    "jsDoc": {
+                        "doc": "Attempts to parse `INNERTUBE_API_KEY`"
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "fetchInnerTubeKey",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [],
+                        "returnType": null,
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 144,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "trending",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "Video",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Video"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 148,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "getSuggestions",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            }
+                        ],
+                        "returnType": null,
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 198,
+                        "col": 4
+                    }
+                },
+                {
+                    "jsDoc": {
+                        "doc": "Validates playlist",
+                        "tags": [
+                            {
+                                "kind": "param",
+                                "name": "url",
+                                "type": "string",
+                                "doc": "Playlist id or url/video id or url to validate"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "type",
+                                "type": "\"VIDEO\"|\"VIDEO_ID\"|\"PLAYLIST\"|\"PLAYLIST_ID\"",
+                                "doc": "URL validation type"
+                            },
+                            {
+                                "kind": "return",
+                                "type": "boolean"
+                            }
+                        ]
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "validate",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "url",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "type",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "union",
+                                    "union": [
+                                        {
+                                            "repr": "VIDEO",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "VIDEO"
+                                            }
+                                        },
+                                        {
+                                            "repr": "VIDEO_ID",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "VIDEO_ID"
+                                            }
+                                        },
+                                        {
+                                            "repr": "PLAYLIST",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "PLAYLIST"
+                                            }
+                                        },
+                                        {
+                                            "repr": "PLAYLIST_ID",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "PLAYLIST_ID"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "boolean",
+                            "kind": "keyword",
+                            "keyword": "boolean"
+                        },
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 225,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "isPlaylist",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "src",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            }
+                        ],
+                        "returnType": null,
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 242,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "Regex",
+                    "kind": "getter",
+                    "functionDef": {
+                        "params": [],
+                        "returnType": null,
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 251,
+                        "col": 4
+                    }
+                }
+            ],
+            "extends": null,
+            "implements": [],
+            "typeParams": [],
+            "superTypeParams": []
+        }
+    },
+    {
+        "kind": "class",
+        "name": "default",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+            "line": 25,
+            "col": 0
+        },
+        "declarationKind": "export",
+        "classDef": {
+            "isAbstract": false,
+            "constructors": [
+                {
+                    "accessibility": "private",
+                    "name": "constructor",
+                    "params": [],
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 26,
+                        "col": 4
+                    }
+                }
+            ],
+            "properties": [],
+            "indexSignatures": [],
+            "methods": [
+                {
+                    "jsDoc": {
+                        "doc": "Search",
+                        "tags": [
+                            {
+                                "kind": "param",
+                                "name": "query",
+                                "type": "string",
+                                "doc": "Search youtube"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "options",
+                                "type": "object",
+                                "doc": "Search options"
+                            },
+                            {
+                                "kind": "unsupported",
+                                "value": "@param {number} [options.limit=20] Limit"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "options.type",
+                                "type": "\"video\"|\"channel\"|\"playlist\"|\"all\"|\"film\"",
+                                "doc": "Type"
+                            },
+                            {
+                                "kind": "unsupported",
+                                "value": "@param {RequestInit} [options.requestOptions] Request options"
+                            },
+                            {
+                                "kind": "unsupported",
+                                "value": "@param {boolean} [options.safeSearch] Safe search filter"
+                            }
+                        ]
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "search",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "intersection",
+                                    "intersection": [
+                                        {
+                                            "repr": "SearchOptions",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "SearchOptions"
+                                            }
+                                        },
+                                        {
+                                            "repr": "",
+                                            "kind": "typeLiteral",
+                                            "typeLiteral": {
+                                                "methods": [],
+                                                "properties": [
+                                                    {
+                                                        "name": "type",
+                                                        "params": [],
+                                                        "computed": false,
+                                                        "optional": false,
+                                                        "tsType": {
+                                                            "repr": "video",
+                                                            "kind": "literal",
+                                                            "literal": {
+                                                                "kind": "string",
+                                                                "string": "video"
+                                                            }
+                                                        },
+                                                        "typeParams": []
+                                                    }
+                                                ],
+                                                "callSignatures": [],
+                                                "indexSignatures": []
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "Video",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Video"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 39,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "search",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "intersection",
+                                    "intersection": [
+                                        {
+                                            "repr": "SearchOptions",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "SearchOptions"
+                                            }
+                                        },
+                                        {
+                                            "repr": "",
+                                            "kind": "typeLiteral",
+                                            "typeLiteral": {
+                                                "methods": [],
+                                                "properties": [
+                                                    {
+                                                        "name": "type",
+                                                        "params": [],
+                                                        "computed": false,
+                                                        "optional": false,
+                                                        "tsType": {
+                                                            "repr": "film",
+                                                            "kind": "literal",
+                                                            "literal": {
+                                                                "kind": "string",
+                                                                "string": "film"
+                                                            }
+                                                        },
+                                                        "typeParams": []
+                                                    }
+                                                ],
+                                                "callSignatures": [],
+                                                "indexSignatures": []
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "Video",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Video"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 40,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "search",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "intersection",
+                                    "intersection": [
+                                        {
+                                            "repr": "SearchOptions",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "SearchOptions"
+                                            }
+                                        },
+                                        {
+                                            "repr": "",
+                                            "kind": "typeLiteral",
+                                            "typeLiteral": {
+                                                "methods": [],
+                                                "properties": [
+                                                    {
+                                                        "name": "type",
+                                                        "params": [],
+                                                        "computed": false,
+                                                        "optional": false,
+                                                        "tsType": {
+                                                            "repr": "channel",
+                                                            "kind": "literal",
+                                                            "literal": {
+                                                                "kind": "string",
+                                                                "string": "channel"
+                                                            }
+                                                        },
+                                                        "typeParams": []
+                                                    }
+                                                ],
+                                                "callSignatures": [],
+                                                "indexSignatures": []
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "Channel",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Channel"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 41,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "search",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "intersection",
+                                    "intersection": [
+                                        {
+                                            "repr": "SearchOptions",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "SearchOptions"
+                                            }
+                                        },
+                                        {
+                                            "repr": "",
+                                            "kind": "typeLiteral",
+                                            "typeLiteral": {
+                                                "methods": [],
+                                                "properties": [
+                                                    {
+                                                        "name": "type",
+                                                        "params": [],
+                                                        "computed": false,
+                                                        "optional": false,
+                                                        "tsType": {
+                                                            "repr": "playlist",
+                                                            "kind": "literal",
+                                                            "literal": {
+                                                                "kind": "string",
+                                                                "string": "playlist"
+                                                            }
+                                                        },
+                                                        "typeParams": []
+                                                    }
+                                                ],
+                                                "callSignatures": [],
+                                                "indexSignatures": []
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "Playlist",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Playlist"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 42,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "search",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "intersection",
+                                    "intersection": [
+                                        {
+                                            "repr": "SearchOptions",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "SearchOptions"
+                                            }
+                                        },
+                                        {
+                                            "repr": "",
+                                            "kind": "typeLiteral",
+                                            "typeLiteral": {
+                                                "methods": [],
+                                                "properties": [
+                                                    {
+                                                        "name": "type",
+                                                        "params": [],
+                                                        "computed": false,
+                                                        "optional": false,
+                                                        "tsType": {
+                                                            "repr": "all",
+                                                            "kind": "literal",
+                                                            "literal": {
+                                                                "kind": "string",
+                                                                "string": "all"
+                                                            }
+                                                        },
+                                                        "typeParams": []
+                                                    }
+                                                ],
+                                                "callSignatures": [],
+                                                "indexSignatures": []
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "",
+                                            "kind": "parenthesized",
+                                            "parenthesized": {
+                                                "repr": "",
+                                                "kind": "union",
+                                                "union": [
+                                                    {
+                                                        "repr": "Video",
+                                                        "kind": "typeRef",
+                                                        "typeRef": {
+                                                            "typeParams": null,
+                                                            "typeName": "Video"
+                                                        }
+                                                    },
+                                                    {
+                                                        "repr": "Channel",
+                                                        "kind": "typeRef",
+                                                        "typeRef": {
+                                                            "typeParams": null,
+                                                            "typeName": "Channel"
+                                                        }
+                                                    },
+                                                    {
+                                                        "repr": "Playlist",
+                                                        "kind": "typeRef",
+                                                        "typeRef": {
+                                                            "typeParams": null,
+                                                            "typeName": "Playlist"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 43,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "search",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "SearchOptions",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "SearchOptions"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "",
+                                            "kind": "parenthesized",
+                                            "parenthesized": {
+                                                "repr": "",
+                                                "kind": "union",
+                                                "union": [
+                                                    {
+                                                        "repr": "Video",
+                                                        "kind": "typeRef",
+                                                        "typeRef": {
+                                                            "typeParams": null,
+                                                            "typeName": "Video"
+                                                        }
+                                                    },
+                                                    {
+                                                        "repr": "Channel",
+                                                        "kind": "typeRef",
+                                                        "typeRef": {
+                                                            "typeParams": null,
+                                                            "typeName": "Channel"
+                                                        }
+                                                    },
+                                                    {
+                                                        "repr": "Playlist",
+                                                        "kind": "typeRef",
+                                                        "typeRef": {
+                                                            "typeParams": null,
+                                                            "typeName": "Playlist"
+                                                        }
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 44,
+                        "col": 4
+                    }
+                },
+                {
+                    "jsDoc": {
+                        "doc": "Search one",
+                        "tags": [
+                            {
+                                "kind": "param",
+                                "name": "query",
+                                "type": "string",
+                                "doc": "Search query"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "type",
+                                "type": "\"video\"|\"channel\"|\"playlist\"|\"all\"|\"film\"",
+                                "doc": "Search type"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "safeSearch",
+                                "type": "boolean",
+                                "doc": "Safe search filter"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "requestOptions",
+                                "type": "RequestInit",
+                                "doc": "Request options"
+                            }
+                        ]
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "searchOne",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "type",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "video",
+                                    "kind": "literal",
+                                    "literal": {
+                                        "kind": "string",
+                                        "string": "video"
+                                    }
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "safeSearch",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "boolean",
+                                    "kind": "keyword",
+                                    "keyword": "boolean"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "requestOptions",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "RequestInit",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "RequestInit"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "Video",
+                                        "kind": "typeRef",
+                                        "typeRef": {
+                                            "typeParams": null,
+                                            "typeName": "Video"
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 82,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "searchOne",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "type",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "film",
+                                    "kind": "literal",
+                                    "literal": {
+                                        "kind": "string",
+                                        "string": "film"
+                                    }
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "safeSearch",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "boolean",
+                                    "kind": "keyword",
+                                    "keyword": "boolean"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "requestOptions",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "RequestInit",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "RequestInit"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "Video",
+                                        "kind": "typeRef",
+                                        "typeRef": {
+                                            "typeParams": null,
+                                            "typeName": "Video"
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 83,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "searchOne",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "type",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "channel",
+                                    "kind": "literal",
+                                    "literal": {
+                                        "kind": "string",
+                                        "string": "channel"
+                                    }
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "safeSearch",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "boolean",
+                                    "kind": "keyword",
+                                    "keyword": "boolean"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "requestOptions",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "RequestInit",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "RequestInit"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "Channel",
+                                        "kind": "typeRef",
+                                        "typeRef": {
+                                            "typeParams": null,
+                                            "typeName": "Channel"
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 84,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "searchOne",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "type",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "playlist",
+                                    "kind": "literal",
+                                    "literal": {
+                                        "kind": "string",
+                                        "string": "playlist"
+                                    }
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "safeSearch",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "boolean",
+                                    "kind": "keyword",
+                                    "keyword": "boolean"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "requestOptions",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "RequestInit",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "RequestInit"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "Playlist",
+                                        "kind": "typeRef",
+                                        "typeRef": {
+                                            "typeParams": null,
+                                            "typeName": "Playlist"
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 85,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "searchOne",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "type",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "union",
+                                    "union": [
+                                        {
+                                            "repr": "video",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "video"
+                                            }
+                                        },
+                                        {
+                                            "repr": "channel",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "channel"
+                                            }
+                                        },
+                                        {
+                                            "repr": "film",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "film"
+                                            }
+                                        },
+                                        {
+                                            "repr": "playlist",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "playlist"
+                                            }
+                                        },
+                                        {
+                                            "repr": "all",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "all"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "safeSearch",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "boolean",
+                                    "kind": "keyword",
+                                    "keyword": "boolean"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "requestOptions",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "RequestInit",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "RequestInit"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "union",
+                                        "union": [
+                                            {
+                                                "repr": "Video",
+                                                "kind": "typeRef",
+                                                "typeRef": {
+                                                    "typeParams": null,
+                                                    "typeName": "Video"
+                                                }
+                                            },
+                                            {
+                                                "repr": "Channel",
+                                                "kind": "typeRef",
+                                                "typeRef": {
+                                                    "typeParams": null,
+                                                    "typeName": "Channel"
+                                                }
+                                            },
+                                            {
+                                                "repr": "Playlist",
+                                                "kind": "typeRef",
+                                                "typeRef": {
+                                                    "typeParams": null,
+                                                    "typeName": "Playlist"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 86,
+                        "col": 4
+                    }
+                },
+                {
+                    "jsDoc": {
+                        "doc": "Returns playlist details",
+                        "tags": [
+                            {
+                                "kind": "param",
+                                "name": "url",
+                                "type": "string",
+                                "doc": "Playlist URL"
+                            },
+                            {
+                                "kind": "unsupported",
+                                "value": "@param {object} [options] Options"
+                            },
+                            {
+                                "kind": "unsupported",
+                                "value": "@param {number} [options.limit=100] Playlist video limit"
+                            },
+                            {
+                                "kind": "unsupported",
+                                "value": "@param {RequestInit} [options.requestOptions] Request Options"
+                            }
+                        ]
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "getPlaylist",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "url",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "options",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "PlaylistOptions",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "PlaylistOptions"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "Playlist",
+                                        "kind": "typeRef",
+                                        "typeRef": {
+                                            "typeParams": null,
+                                            "typeName": "Playlist"
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 108,
+                        "col": 4
+                    }
+                },
+                {
+                    "jsDoc": {
+                        "doc": "Returns basic video info",
+                        "tags": [
+                            {
+                                "kind": "param",
+                                "name": "url",
+                                "doc": "Video url to parse"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "requestOptions",
+                                "doc": "Request options"
+                            }
+                        ]
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "getVideo",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "url",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "union",
+                                    "union": [
+                                        {
+                                            "repr": "string",
+                                            "kind": "keyword",
+                                            "keyword": "string"
+                                        },
+                                        {
+                                            "repr": "Video",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Video"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "requestOptions",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "RequestInit",
+                                    "kind": "typeRef",
+                                    "typeRef": {
+                                        "typeParams": null,
+                                        "typeName": "RequestInit"
+                                    }
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "Video",
+                                        "kind": "typeRef",
+                                        "typeRef": {
+                                            "typeParams": null,
+                                            "typeName": "Video"
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 123,
+                        "col": 4
+                    }
+                },
+                {
+                    "jsDoc": {
+                        "doc": "Fetches homepage videos"
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "homepage",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "Video",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Video"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 136,
+                        "col": 4
+                    }
+                },
+                {
+                    "jsDoc": {
+                        "doc": "Attempts to parse `INNERTUBE_API_KEY`"
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "fetchInnerTubeKey",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [],
+                        "returnType": null,
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 144,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "trending",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [],
+                        "returnType": {
+                            "repr": "Promise",
+                            "kind": "typeRef",
+                            "typeRef": {
+                                "typeParams": [
+                                    {
+                                        "repr": "",
+                                        "kind": "array",
+                                        "array": {
+                                            "repr": "Video",
+                                            "kind": "typeRef",
+                                            "typeRef": {
+                                                "typeParams": null,
+                                                "typeName": "Video"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "typeName": "Promise"
+                            }
+                        },
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 148,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "getSuggestions",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "query",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            }
+                        ],
+                        "returnType": null,
+                        "isAsync": true,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 198,
+                        "col": 4
+                    }
+                },
+                {
+                    "jsDoc": {
+                        "doc": "Validates playlist",
+                        "tags": [
+                            {
+                                "kind": "param",
+                                "name": "url",
+                                "type": "string",
+                                "doc": "Playlist id or url/video id or url to validate"
+                            },
+                            {
+                                "kind": "param",
+                                "name": "type",
+                                "type": "\"VIDEO\"|\"VIDEO_ID\"|\"PLAYLIST\"|\"PLAYLIST_ID\"",
+                                "doc": "URL validation type"
+                            },
+                            {
+                                "kind": "return",
+                                "type": "boolean"
+                            }
+                        ]
+                    },
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "validate",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "url",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            },
+                            {
+                                "kind": "identifier",
+                                "name": "type",
+                                "optional": true,
+                                "tsType": {
+                                    "repr": "",
+                                    "kind": "union",
+                                    "union": [
+                                        {
+                                            "repr": "VIDEO",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "VIDEO"
+                                            }
+                                        },
+                                        {
+                                            "repr": "VIDEO_ID",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "VIDEO_ID"
+                                            }
+                                        },
+                                        {
+                                            "repr": "PLAYLIST",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "PLAYLIST"
+                                            }
+                                        },
+                                        {
+                                            "repr": "PLAYLIST_ID",
+                                            "kind": "literal",
+                                            "literal": {
+                                                "kind": "string",
+                                                "string": "PLAYLIST_ID"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "returnType": {
+                            "repr": "boolean",
+                            "kind": "keyword",
+                            "keyword": "boolean"
+                        },
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 225,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "isPlaylist",
+                    "kind": "method",
+                    "functionDef": {
+                        "params": [
+                            {
+                                "kind": "identifier",
+                                "name": "src",
+                                "optional": false,
+                                "tsType": {
+                                    "repr": "string",
+                                    "kind": "keyword",
+                                    "keyword": "string"
+                                }
+                            }
+                        ],
+                        "returnType": null,
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 242,
+                        "col": 4
+                    }
+                },
+                {
+                    "accessibility": null,
+                    "optional": false,
+                    "isAbstract": false,
+                    "isStatic": true,
+                    "name": "Regex",
+                    "kind": "getter",
+                    "functionDef": {
+                        "params": [],
+                        "returnType": null,
+                        "isAsync": false,
+                        "isGenerator": false,
+                        "typeParams": []
+                    },
+                    "location": {
+                        "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+                        "line": 251,
+                        "col": 4
+                    }
+                }
+            ],
+            "extends": null,
+            "implements": [],
+            "typeParams": [],
+            "superTypeParams": []
+        }
+    },
+    {
+        "kind": "import",
+        "name": "Util",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+            "line": 7,
+            "col": 0
+        },
+        "declarationKind": "private",
+        "jsDoc": {
+            "doc": "YouTube Search",
+            "tags": [
+                {
+                    "kind": "unsupported",
+                    "value": "@author DevAndromeda"
+                }
+            ]
+        },
+        "importDef": {
+            "src": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/Util.ts",
+            "imported": "default"
+        }
+    },
+    {
+        "kind": "import",
+        "name": "Channel",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+            "line": 8,
+            "col": 0
+        },
+        "declarationKind": "private",
+        "importDef": {
+            "src": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/Structures/exports.ts",
+            "imported": "Channel"
+        }
+    },
+    {
+        "kind": "import",
+        "name": "Video",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+            "line": 8,
+            "col": 0
+        },
+        "declarationKind": "private",
+        "importDef": {
+            "src": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/Structures/exports.ts",
+            "imported": "Video"
+        }
+    },
+    {
+        "kind": "import",
+        "name": "Playlist",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+            "line": 8,
+            "col": 0
+        },
+        "declarationKind": "private",
+        "importDef": {
+            "src": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/Structures/exports.ts",
+            "imported": "Playlist"
+        }
+    },
+    {
+        "kind": "import",
+        "name": "Thumbnail",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+            "line": 8,
+            "col": 0
+        },
+        "declarationKind": "private",
+        "importDef": {
+            "src": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/Structures/exports.ts",
+            "imported": "Thumbnail"
+        }
+    },
+    {
+        "kind": "import",
+        "name": "Formatter",
+        "location": {
+            "filename": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/mod.ts",
+            "line": 9,
+            "col": 0
+        },
+        "declarationKind": "private",
+        "importDef": {
+            "src": "https://raw.githubusercontent.com/DevAndromeda/youtube-sr/main/deno/formatter.ts",
+            "imported": "Formatter"
+        }
+    }
+]
