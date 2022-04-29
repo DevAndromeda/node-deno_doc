@@ -1,0 +1,42 @@
+{
+  "name": "deno_doc",
+  "version": "0.1.0",
+  "description": "Deno doc generator for node.js",
+  "main": "./src/index.cjs",
+  "type": "module",
+  "module": "./src/index.js",
+  "exports": {
+    "import": "./src/index.js",
+    "require": "./src/index.cjs"
+  },
+  "files": ["src"],
+  "scripts": {
+    "dev:cjs": "cd test && node index.cjs",
+    "dev:mjs": "cd test && node index.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevAndromeda/node-deno_doc.git"
+  },
+  "keywords": [
+    "deno",
+    "doc",
+    "docgen",
+    "jsdoc",
+    "typescript",
+    "typedoc",
+    "api",
+    "documentation",
+    "generator",
+    "node"
+  ],
+  "author": "DevAndromeda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevAndromeda/node-deno_doc/issues"
+  },
+  "homepage": "https://github.com/DevAndromeda/node-deno_doc#readme",
+  "devDependencies": {
+    "@types/node": "^17.0.30"
+  }
+}
