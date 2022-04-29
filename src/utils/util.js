@@ -7,7 +7,10 @@ export default async function tryGetFetch() {
 
     // fallback
     for (const mod of ["undici", "node-fetch"]) {
-        return import(mod).then(res => res.fetch || res.default || res);
+        try {
+            const _mod = await import(mod).then(res => res.fetch || res.default || res);
+            return _mod;
+        } catch {}
     }
 
     throw new Error("Could not resolve fetch api");
